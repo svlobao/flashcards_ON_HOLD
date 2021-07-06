@@ -1,8 +1,9 @@
-import 'package:flashcards/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/login_page.dart';
 import 'pages/loading_page.dart';
+import 'pages/home_page.dart';
+import 'pages/kanas_page.dart';
 
 void main() {
   runApp(Flashcards());
@@ -21,6 +22,7 @@ class Flashcards extends StatelessWidget {
         '/': (context) => LoadingPage(),
         '/login': (context) => LoginPage(),
         '/home': (context) => HomePage(),
+        '/kanas': (context) => Kanas(),
       },
     );
   }

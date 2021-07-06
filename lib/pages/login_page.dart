@@ -42,10 +42,11 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: ElevatedButton(
-                    onPressed: () {
-                      print('logged in');
-                    },
-                    child: Text('Login')),
+                  child: Text('Login'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
+                ),
               )
             ],
           ),
