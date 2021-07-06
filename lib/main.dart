@@ -1,6 +1,8 @@
+import 'package:flashcards/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/landing_page.dart';
+import 'pages/login_page.dart';
+import 'pages/loading_page.dart';
 
 void main() {
   runApp(Flashcards());
@@ -14,7 +16,12 @@ class Flashcards extends StatelessWidget {
         primarySwatch: Colors.pink,
         brightness: Brightness.dark,
       ),
-      home: LandingPage(),
+      initialRoute: '/login',
+      routes: {
+        '/': (context) => LoadingPage(),
+        '/login': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }
