@@ -4,6 +4,8 @@ import 'pages/login_page.dart';
 import 'pages/loading_page.dart';
 import 'pages/home_page.dart';
 import 'pages/kanas_page.dart';
+import 'pages/hiraganas_page.dart';
+import 'pages/katakanas_page.dart';
 
 void main() {
   runApp(Flashcards());
@@ -23,6 +25,8 @@ class Flashcards extends StatelessWidget {
         '/login': (context) => LoginPage(),
         '/home': (context) => HomePage(),
         '/kanas': (context) => Kanas(),
+        '/hiraganas': (context) => Hiraganas(),
+        '/katakanas': (context) => Katakanas(),
       },
     );
   }

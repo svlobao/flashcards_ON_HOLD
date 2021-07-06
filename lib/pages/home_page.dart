@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.card_giftcard_rounded),
               title: Text('Hiragana and Katakana'),
               subtitle: Text('Learn the Japanese writting systems'),
-              onTap: () => Navigator.pushNamed(context, '/login'),
+              onTap: () => Navigator.pushNamed(context, '/kanas'),
             ),
             ListTile(
               leading: Icon(Icons.card_giftcard_rounded),
