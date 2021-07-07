@@ -17,14 +17,17 @@ class _HiraganasState extends State<Hiraganas> {
       body: GridView.count(
         crossAxisCount: 5,
         children: [
-          Card(
-            color: Colors.grey,
-            child: Center(
-              child: Text(
-                'あ',
-                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+          InkWell(
+            child: Card(
+              color: Colors.grey,
+              child: Center(
+                child: Text(
+                  'あ',
+                  style: TextStyle(color: Colors.black87, fontSize: 32.0),
+                ),
               ),
             ),
+            onTap: () => Navigator.pushNamed(context, '/flashcard'),
           ),
           Card(
             color: Colors.grey,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'flashcards/flashcard_template.dart';
 import 'pages/login_page.dart';
 import 'pages/loading_page.dart';
 import 'pages/home_page.dart';
@@ -27,6 +28,7 @@ class Flashcards extends StatelessWidget {
         '/kanas': (context) => Kanas(),
         '/hiraganas': (context) => Hiraganas(),
         '/katakanas': (context) => Katakanas(),
+        '/flashcard': (context) => FlashcardPagaTemplate(),
       },
     );
   }
