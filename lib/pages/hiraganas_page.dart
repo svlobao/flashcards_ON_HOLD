@@ -14,10 +14,100 @@ class _HiraganasState extends State<Hiraganas> {
       appBar: AppBar(
         title: Text('Hiragana Flashcards'),
       ),
-      body: Center(
-        child: Container(
-          child: Text('Hiraganas in gridview'),
-        ),
+      body: GridView.count(
+        crossAxisCount: 5,
+        children: [
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'あ',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'い',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'う',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'え',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'お',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'か',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'き',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'く',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'け',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.grey,
+            child: Center(
+              child: Text(
+                'こ',
+                style: TextStyle(color: Colors.black87, fontSize: 32.0),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
