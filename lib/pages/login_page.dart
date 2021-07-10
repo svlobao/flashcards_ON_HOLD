@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -11,45 +11,23 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: ElevatedButton(
-                  child: Text('Login'),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/home');
-                  },
-                ),
-              ),
-            ],
-          ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Text(
+              'KanAdventures',
+              style: TextStyle(color: Colors.grey[900], fontSize: 45),
+            ),
+            TextField(),
+            TextField(),
+            ElevatedButton(
+                onPressed: () {},
+                child: Text('Login', textAlign: TextAlign.center)),
+            TextButton(
+                onPressed: () {},
+                child: Text('Click here to create an account.',
+                    textAlign: TextAlign.center))
+          ],
         ),
       ),
     );
