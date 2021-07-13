@@ -1,20 +1,16 @@
-import 'package:flashcards/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const Kanadventure());
-}
+import 'pages/homepage.dart';
 
-class Kanadventure extends StatelessWidget {
-  const Kanadventure({Key? key}) : super(key: key);
+void main() => runApp(const Kanadventures());
+
+class Kanadventures extends StatelessWidget {
+  const Kanadventures({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/login',
-      routes: {
-        '/login': (context) => const LoginPage(),
-      },
-    );
+        initialRoute: '/home',
+        routes: {'/home': (context) => const Homepage()});
   }
 }
