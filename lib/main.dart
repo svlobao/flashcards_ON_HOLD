@@ -1,3 +1,4 @@
+import 'package:flashcards/pages/flashcards.dart';
 import 'package:flashcards/pages/kanas.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class Kanadventures extends StatelessWidget {
     return MaterialApp(initialRoute: '/homepage', routes: {
       '/homepage': (context) => const Homepage(),
       '/kanas': (context) => const Kanas(),
+      '/flashcards': (context) => const Flashcards(),
     });
   }
 }

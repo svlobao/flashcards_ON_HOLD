@@ -22,13 +22,347 @@ class _KanasState extends State<Kanas> {
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
-            Center(child: Text('Hiragana Mini Cards')),
-            Center(child: Text('Katakana Mini Cards')),
-          ],
+        body: SafeArea(
+          child: TabBarView(
+            children: [
+              GridView.count(
+                crossAxisCount: 5,
+                mainAxisSpacing: 5.0,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'あ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'い',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'う',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'え',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'お',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'か',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'き',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'く',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'け',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'こ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              GridView.count(
+                crossAxisCount: 5,
+                mainAxisSpacing: 5.0,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'ア',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'イ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'ウ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'エ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'オ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'カ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'キ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'ク',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'ケ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, '/flashcards');
+                      });
+                    },
+                    child: const Card(
+                      elevation: 5.0,
+                      child: Center(
+                        child: Text(
+                          'コ',
+                          style: TextStyle(fontSize: 35.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+// Widget _kanaCard({}){}
