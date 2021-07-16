@@ -10,44 +10,22 @@ class Kanas extends StatefulWidget {
 class _KanasState extends State<Kanas> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hiragana & Katakana'),
-        bottom: TabBar(
-          tabs: [
-            Tab(text: 'ひらがな'),
-            Tab(text: 'カタカナ'),
-          ],
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Kanas'),
+          bottom: const TabBar(
+            tabs: [
+              Tab(child: Text('ひらがな')),
+              Tab(child: Text('カタカナ')),
+            ],
+          ),
         ),
-      ),
-      body: SafeArea(
-        child: TabBarView(
+        body: const TabBarView(
           children: [
-            GridView.count(
-              crossAxisCount: 5,
-              children: [
-                Text('1'),
-                Text('1'),
-                Text('1'),
-                Text('1'),
-                Text('1'),
-                Text('2'),
-                Text('2'),
-                Text('2'),
-                Text('2'),
-                Text('2'),
-                Text('1'),
-                Text('1'),
-                Text('1'),
-                Text('1'),
-                Text('1'),
-                Text('2'),
-                Text('2'),
-                Text('2'),
-                Text('2'),
-                Text('2'),
-              ],
-            )
+            Center(child: Text('Hiragana Mini Cards')),
+            Center(child: Text('Katakana Mini Cards')),
           ],
         ),
       ),
