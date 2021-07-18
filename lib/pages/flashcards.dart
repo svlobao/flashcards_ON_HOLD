@@ -1,4 +1,6 @@
+import 'dart:core';
 import 'dart:math';
+
 import 'package:flashcards/widgets/flashcard_data.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +12,6 @@ class Flashcards extends StatefulWidget {
 }
 
 class _FlashcardsState extends State<Flashcards> {
-  int currentIndex = 0;
-
   List<FlashcardData> hiraganaCards = [
     FlashcardData(frontLabel: 'あ', backLabel: 'A'),
     FlashcardData(frontLabel: 'い', backLabel: 'I'),
@@ -63,6 +63,12 @@ class _FlashcardsState extends State<Flashcards> {
 
   @override
   Widget build(BuildContext context) {
+    final Map data = ModalRoute.of(context)!.settings.arguments! as Map;
+    var currentIndex = data['index'] as int;
+
+    // ignore: avoid_print
+    print(data);
+
     return Scaffold(
       appBar: AppBar(title: const Text('Flashcards')),
       body: SafeArea(

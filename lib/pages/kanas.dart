@@ -10,6 +10,8 @@ class Kanas extends StatefulWidget {
 class _KanasState extends State<Kanas> {
   @override
   Widget build(BuildContext context) {
+    int cardIndex = 1;
+
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -32,7 +34,9 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        cardIndex = 0;
+                        Navigator.pushNamed(context, '/flashcards',
+                            arguments: {'index': cardIndex});
                       });
                     },
                     child: const Card(
@@ -48,7 +52,9 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        cardIndex = 1;
+                        Navigator.pushNamed(context, '/flashcards',
+                            arguments: {'index': cardIndex});
                       });
                     },
                     child: const Card(
