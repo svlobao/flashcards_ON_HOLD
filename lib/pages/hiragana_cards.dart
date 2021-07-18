@@ -4,14 +4,14 @@ import 'dart:math';
 import 'package:flashcards/widgets/flashcard_data.dart';
 import 'package:flutter/material.dart';
 
-class Flashcards extends StatefulWidget {
-  const Flashcards({Key? key}) : super(key: key);
+class Hiragana extends StatefulWidget {
+  const Hiragana({Key? key}) : super(key: key);
 
   @override
-  _FlashcardsState createState() => _FlashcardsState();
+  _HiraganaState createState() => _HiraganaState();
 }
 
-class _FlashcardsState extends State<Flashcards> {
+class _HiraganaState extends State<Hiragana> {
   List<FlashcardData> hiraganaCards = [
     FlashcardData(frontLabel: 'あ', backLabel: 'A'),
     FlashcardData(frontLabel: 'い', backLabel: 'I'),

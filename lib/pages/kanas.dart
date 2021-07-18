@@ -35,7 +35,7 @@ class _KanasState extends State<Kanas> {
                     onTap: () {
                       setState(() {
                         cardIndex = 0;
-                        Navigator.pushNamed(context, '/flashcards',
+                        Navigator.pushNamed(context, '/hiragana',
                             arguments: {'index': cardIndex});
                       });
                     },
@@ -53,7 +53,7 @@ class _KanasState extends State<Kanas> {
                     onTap: () {
                       setState(() {
                         cardIndex = 1;
-                        Navigator.pushNamed(context, '/flashcards',
+                        Navigator.pushNamed(context, '/hiragana',
                             arguments: {'index': cardIndex});
                       });
                     },
@@ -70,7 +70,9 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        cardIndex = 2;
+                        Navigator.pushNamed(context, '/hiragana',
+                            arguments: {'index': cardIndex});
                       });
                     },
                     child: const Card(
@@ -86,7 +88,9 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        cardIndex = 3;
+                        Navigator.pushNamed(context, '/hiragana',
+                            arguments: {'index': cardIndex});
                       });
                     },
                     child: const Card(
@@ -102,7 +106,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -118,7 +122,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -134,7 +138,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -150,7 +154,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -166,7 +170,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -182,7 +186,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -204,7 +208,9 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        cardIndex = 0;
+                        Navigator.pushNamed(context, '/katakana',
+                            arguments: {'index': cardIndex});
                       });
                     },
                     child: const Card(
@@ -220,7 +226,9 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        cardIndex = 1;
+                        Navigator.pushNamed(context, '/katakana',
+                            arguments: {'index': cardIndex});
                       });
                     },
                     child: const Card(
@@ -236,7 +244,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -252,7 +260,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -268,7 +276,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -284,7 +292,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/flashchiraganaards');
                       });
                     },
                     child: const Card(
@@ -300,7 +308,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/hiragana');
                       });
                     },
                     child: const Card(
@@ -316,7 +324,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/katakana');
                       });
                     },
                     child: const Card(
@@ -332,7 +340,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/katakana');
                       });
                     },
                     child: const Card(
@@ -348,7 +356,7 @@ class _KanasState extends State<Kanas> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        Navigator.pushNamed(context, '/flashcards');
+                        Navigator.pushNamed(context, '/katakana');
                       });
                     },
                     child: const Card(
