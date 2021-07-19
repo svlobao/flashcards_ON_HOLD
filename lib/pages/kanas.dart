@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flashcards/widgets/flashcard_data.dart';
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 
 class Kanas extends StatefulWidget {
@@ -55,12 +56,23 @@ class _KanasState extends State<Kanas> {
                     child: SizedBox(
                       height: 350,
                       width: 250,
-                      child: Card(
-                        elevation: 4.0,
-                        child: Center(
-                          child: Text(
-                            hiraganaCards[currentIndex].frontLabel,
-                            style: const TextStyle(fontSize: 40.0),
+                      child: FlipCard(
+                        front: Card(
+                          elevation: 4.0,
+                          child: Center(
+                            child: Text(
+                              hiraganaCards[currentIndex].frontLabel,
+                              style: const TextStyle(fontSize: 40.0),
+                            ),
+                          ),
+                        ),
+                        back: Card(
+                          elevation: 4.0,
+                          child: Center(
+                            child: Text(
+                              hiraganaCards[currentIndex].backLabel,
+                              style: const TextStyle(fontSize: 40.0),
+                            ),
                           ),
                         ),
                       ),
@@ -101,12 +113,23 @@ class _KanasState extends State<Kanas> {
                     child: SizedBox(
                       height: 350,
                       width: 250,
-                      child: Card(
-                        elevation: 4.0,
-                        child: Center(
-                          child: Text(
-                            katakanaCards[currentIndex].frontLabel,
-                            style: const TextStyle(fontSize: 40.0),
+                      child: FlipCard(
+                        front: Card(
+                          elevation: 4.0,
+                          child: Center(
+                            child: Text(
+                              katakanaCards[currentIndex].frontLabel,
+                              style: const TextStyle(fontSize: 40.0),
+                            ),
+                          ),
+                        ),
+                        back: Card(
+                          elevation: 4.0,
+                          child: Center(
+                            child: Text(
+                              katakanaCards[currentIndex].backLabel,
+                              style: const TextStyle(fontSize: 40.0),
+                            ),
                           ),
                         ),
                       ),
