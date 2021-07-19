@@ -1,10 +1,7 @@
-import 'package:flashcards/pages/hiragana_cards.dart';
-import 'package:flashcards/pages/hiragana_cards_2.dart';
-import 'package:flashcards/pages/kanas.dart';
-import 'package:flashcards/pages/katakana_cards.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/homepage.dart';
+import 'pages/kanas.dart';
 
 void main() => runApp(const Kanadventures());
 
@@ -16,9 +13,6 @@ class Kanadventures extends StatelessWidget {
     return MaterialApp(initialRoute: '/homepage', routes: {
       '/homepage': (context) => const Homepage(),
       '/kanas': (context) => const Kanas(),
-      // '/hiragana': (context) => const Hiragana(),
-      '/katakana': (context) => const Katakana(),
-      '/hiragana2': (context) => const Hiragana2(),
     });
   }
 }

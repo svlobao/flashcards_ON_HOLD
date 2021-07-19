@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:flashcards/widgets/flashcard_data.dart';
 import 'package:flutter/material.dart';
 
 class Kanas extends StatefulWidget {
@@ -8,10 +11,28 @@ class Kanas extends StatefulWidget {
 }
 
 class _KanasState extends State<Kanas> {
+  List<FlashcardData> hiraganaCards = FlashcardLists().hiraganaCards;
+  List<FlashcardData> katakanaCards = FlashcardLists().katakanaCards;
+  int currentIndex = 0;
+
+  void increaseIndex() {
+    currentIndex + 1 >= hiraganaCards.length
+        ? currentIndex = 0
+        : currentIndex += 1;
+  }
+
+  void decreaseIndex() {
+    currentIndex - 1 <= 0
+        ? currentIndex = hiraganaCards.length - 1
+        : currentIndex -= 1;
+  }
+
+  void randomIndex() {
+    currentIndex = Random().nextInt(hiraganaCards.length);
+  }
+
   @override
   Widget build(BuildContext context) {
-    int cardIndex = 1;
-
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -27,347 +48,95 @@ class _KanasState extends State<Kanas> {
         body: SafeArea(
           child: TabBarView(
             children: [
-              GridView.count(
-                crossAxisCount: 5,
-                mainAxisSpacing: 5.0,
+              Column(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        cardIndex = 0;
-                        Navigator.pushNamed(context, '/hiragana2',
-                            arguments: {'index': cardIndex});
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'あ',
-                          style: TextStyle(fontSize: 35.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 50.0),
+                    child: SizedBox(
+                      height: 350,
+                      width: 250,
+                      child: Card(
+                        elevation: 4.0,
+                        child: Center(
+                          child: Text(
+                            hiraganaCards[currentIndex].frontLabel,
+                            style: const TextStyle(fontSize: 40.0),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        cardIndex = 1;
-                        Navigator.pushNamed(context, '/hiragana2',
-                            arguments: {'index': cardIndex});
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'い',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        cardIndex = 2;
-                        Navigator.pushNamed(context, '/hiragana2',
-                            arguments: {'index': cardIndex});
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'う',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        cardIndex = 3;
-                        Navigator.pushNamed(context, '/hiragana2',
-                            arguments: {'index': cardIndex});
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'え',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'お',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'か',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'き',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'く',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'け',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'こ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              decreaseIndex();
+                            });
+                          },
+                          child: const Text('<')),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              randomIndex();
+                            });
+                          },
+                          child: const Text('?')),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              increaseIndex();
+                            });
+                          },
+                          child: const Text('>')),
+                    ],
                   ),
                 ],
               ),
-              GridView.count(
-                crossAxisCount: 5,
-                mainAxisSpacing: 5.0,
+              Column(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        cardIndex = 0;
-                        Navigator.pushNamed(context, '/katakana',
-                            arguments: {'index': cardIndex});
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'ア',
-                          style: TextStyle(fontSize: 35.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 50.0),
+                    child: SizedBox(
+                      height: 350,
+                      width: 250,
+                      child: Card(
+                        elevation: 4.0,
+                        child: Center(
+                          child: Text(
+                            katakanaCards[currentIndex].frontLabel,
+                            style: const TextStyle(fontSize: 40.0),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        cardIndex = 1;
-                        Navigator.pushNamed(context, '/katakana',
-                            arguments: {'index': cardIndex});
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'イ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'ウ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'エ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'オ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/flashchiraganaards');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'カ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/hiragana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'キ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/katakana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'ク',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/katakana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'ケ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        Navigator.pushNamed(context, '/katakana');
-                      });
-                    },
-                    child: const Card(
-                      elevation: 5.0,
-                      child: Center(
-                        child: Text(
-                          'コ',
-                          style: TextStyle(fontSize: 35.0),
-                        ),
-                      ),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              decreaseIndex();
+                            });
+                          },
+                          child: const Text('<')),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              randomIndex();
+                            });
+                          },
+                          child: const Text('?')),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              increaseIndex();
+                            });
+                          },
+                          child: const Text('>')),
+                    ],
                   ),
                 ],
               ),
