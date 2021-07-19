@@ -35,7 +35,7 @@ class _KanasState extends State<Kanas> {
                     onTap: () {
                       setState(() {
                         cardIndex = 0;
-                        Navigator.pushNamed(context, '/hiragana',
+                        Navigator.pushNamed(context, '/hiragana2',
                             arguments: {'index': cardIndex});
                       });
                     },
@@ -53,7 +53,7 @@ class _KanasState extends State<Kanas> {
                     onTap: () {
                       setState(() {
                         cardIndex = 1;
-                        Navigator.pushNamed(context, '/hiragana',
+                        Navigator.pushNamed(context, '/hiragana2',
                             arguments: {'index': cardIndex});
                       });
                     },
@@ -71,7 +71,7 @@ class _KanasState extends State<Kanas> {
                     onTap: () {
                       setState(() {
                         cardIndex = 2;
-                        Navigator.pushNamed(context, '/hiragana',
+                        Navigator.pushNamed(context, '/hiragana2',
                             arguments: {'index': cardIndex});
                       });
                     },
@@ -89,7 +89,7 @@ class _KanasState extends State<Kanas> {
                     onTap: () {
                       setState(() {
                         cardIndex = 3;
-                        Navigator.pushNamed(context, '/hiragana',
+                        Navigator.pushNamed(context, '/hiragana2',
                             arguments: {'index': cardIndex});
                       });
                     },

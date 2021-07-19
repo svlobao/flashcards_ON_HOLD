@@ -64,13 +64,10 @@ class _KatakanaState extends State<Katakana> {
   @override
   Widget build(BuildContext context) {
     final Map data = ModalRoute.of(context)!.settings.arguments! as Map;
-    var currentIndex = data['index'] as int;
-
-    // ignore: avoid_print
-    print(data);
+    var cardIndex = data['index'] as int;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Flashcards')),
+      appBar: AppBar(title: const Text('Katakana Flashcards')),
       body: SafeArea(
         child: Column(
           children: [
@@ -87,7 +84,7 @@ class _KatakanaState extends State<Katakana> {
                       elevation: 5,
                       child: Center(
                           child: Text(
-                        katakanaCards[currentIndex].frontLabel,
+                        katakanaCards[cardIndex].frontLabel,
                         style: const TextStyle(fontSize: 45),
                       )))),
             ),
@@ -97,9 +94,9 @@ class _KatakanaState extends State<Katakana> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      currentIndex == 0
-                          ? currentIndex = katakanaCards.length - 1
-                          : currentIndex -= 1;
+                      cardIndex == 0
+                          ? cardIndex = katakanaCards.length - 1
+                          : cardIndex -= 1;
                     });
                   },
                   child: const Text(
@@ -110,7 +107,7 @@ class _KatakanaState extends State<Katakana> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      currentIndex = Random().nextInt(katakanaCards.length);
+                      cardIndex = Random().nextInt(katakanaCards.length);
                     });
                   },
                   child: const Text(
@@ -121,9 +118,9 @@ class _KatakanaState extends State<Katakana> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      currentIndex + 1 >= katakanaCards.length
-                          ? currentIndex = 0
-                          : currentIndex += 1;
+                      cardIndex + 1 >= katakanaCards.length
+                          ? cardIndex = 0
+                          : cardIndex += 1;
                     });
                   },
                   child: const Text(

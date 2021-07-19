@@ -78,8 +78,16 @@ class _Hiragana2State extends State<Hiragana2> {
     currentIndex = Random().nextInt(hiraganaCards.length);
   }
 
+  int pressed = 0;
+  String cardLabel = '';
+
   @override
   Widget build(BuildContext context) {
+    final Map data = ModalRoute.of(context)!.settings.arguments! as Map;
+    var tempLabel = data['index'] as int;
+    pressed == 0
+        ? cardLabel = hiraganaCards[tempLabel].frontLabel
+        : cardLabel = hiraganaCards[currentIndex].frontLabel;
     return Scaffold(
       appBar: AppBar(title: const Text('Hiragana Flashcards')),
       body: SafeArea(
@@ -94,7 +102,7 @@ class _Hiragana2State extends State<Hiragana2> {
                     width: 250,
                     child: Card(
                       child: Center(
-                        child: Text(hiraganaCards[currentIndex].frontLabel),
+                        child: Text(cardLabel),
                       ),
                     ),
                   ),
@@ -108,6 +116,8 @@ class _Hiragana2State extends State<Hiragana2> {
                     onPressed: () {
                       setState(() {
                         decreaseIndex();
+                        print(currentIndex);
+                        pressed += 1;
                       });
                     },
                     child: const Text('<')),
@@ -115,6 +125,8 @@ class _Hiragana2State extends State<Hiragana2> {
                     onPressed: () {
                       setState(() {
                         randomIndex();
+                        print(currentIndex);
+                        pressed += 1;
                       });
                     },
                     child: const Text('?')),
@@ -122,6 +134,8 @@ class _Hiragana2State extends State<Hiragana2> {
                     onPressed: () {
                       setState(() {
                         increaseIndex();
+                        print(currentIndex);
+                        pressed += 1;
                       });
                     },
                     child: const Text('>')),
