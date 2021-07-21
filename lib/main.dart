@@ -10,9 +10,14 @@ class Kanadventures extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: '/homepage', routes: {
-      '/homepage': (context) => const Homepage(),
-      '/kanas': (context) => const Kanas(),
-    });
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/homepage',
+      routes: {
+        '/homepage': (context) => const Homepage(),
+        '/kanas': (context) => const Kanas(),
+      },
+      theme: ThemeData.dark(),
+    );
   }
 }

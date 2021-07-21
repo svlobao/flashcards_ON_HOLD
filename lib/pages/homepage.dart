@@ -37,6 +37,10 @@ class _HomepageState extends State<Homepage> {
                 child: ListTile(
                   leading: Icon(Icons.arrow_right_sharp),
                   title: Text('JLPT - 日本語能力試験'),
+                  trailing: Text(
+                    'Coming soon',
+                    style: TextStyle(color: Colors.red),
+                  ),
                 ),
               ),
               const Padding(
@@ -44,6 +48,10 @@ class _HomepageState extends State<Homepage> {
                 child: ListTile(
                   leading: Icon(Icons.arrow_right_sharp),
                   title: Text('Practice it!'),
+                  trailing: Text(
+                    'Coming soon',
+                    style: TextStyle(color: Colors.red),
+                  ),
                 ),
               ),
             ],
