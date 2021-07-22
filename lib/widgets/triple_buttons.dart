@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class TripleButtons extends StatefulWidget {
   int currentIndex;
-  List<FlashcardData> flashCards;
+  final List<FlashcardData> flashCards;
 
   TripleButtons(
       {Key? key, required this.currentIndex, required this.flashCards})
@@ -16,24 +16,24 @@ class TripleButtons extends StatefulWidget {
 }
 
 class _TripleButtonsState extends State<TripleButtons> {
-  void increaseIndex() {
-    widget.currentIndex + 1 >= widget.flashCards.length
-        ? widget.currentIndex = 0
-        : widget.currentIndex += 1;
-  }
-
-  void decreaseIndex() {
-    widget.currentIndex - 1 <= 0
-        ? widget.currentIndex = widget.flashCards.length - 1
-        : widget.currentIndex -= 1;
-  }
-
-  void randomIndex() {
-    widget.currentIndex = Random().nextInt(widget.flashCards.length);
-  }
-
   @override
   Widget build(BuildContext context) {
+    void decreaseIndex() {
+      widget.currentIndex - 1 <= 0
+          ? widget.currentIndex = widget.flashCards.length - 1
+          : widget.currentIndex -= 1;
+    }
+
+    void randomIndex() {
+      widget.currentIndex = Random().nextInt(widget.flashCards.length);
+    }
+
+    void increaseIndex() {
+      widget.currentIndex + 1 >= widget.flashCards.length
+          ? widget.currentIndex = 0
+          : widget.currentIndex += 1;
+    }
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [

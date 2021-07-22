@@ -42,7 +42,7 @@ class _CustomCardState extends State<CustomCard> {
         child: Center(
           child: Text(
             widget.frontLabel,
-            style: const TextStyle(fontSize: 70.0),
+            style: const TextStyle(fontSize: 80.0),
           ),
         ),
       ),
@@ -52,11 +52,11 @@ class _CustomCardState extends State<CustomCard> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 95.0),
+              padding: const EdgeInsets.symmetric(vertical: 80.0),
               child: Text(
                 widget.backLabel,
                 style:
-                    const TextStyle(fontSize: 40.0, color: Colors.greenAccent),
+                    const TextStyle(fontSize: 60.0, color: Colors.greenAccent),
               ),
             ),
             const Padding(
